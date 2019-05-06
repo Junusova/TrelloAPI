@@ -1,5 +1,7 @@
 package domain
 
+import io.restassured.http.Header
+
 data class NewBoardDto (
     val name: String,
     val prefs_permissionLevel: String,

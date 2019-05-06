@@ -1,5 +1,6 @@
 package tests
 
+import baseMethods.GetDscMethods.getHeaderExecutePostApiMethod
 import baseMethods.createBoardNotePostApiMethod
 import baseMethods.successfullyLogin.loginExecutePostApiMethod
 import fixtures.NewBoardHelpers
@@ -12,12 +13,18 @@ class Login {
 
     @Test
     fun test_01_Login() {
-        loginExecutePostApiMethod()
-            .statusCode(200)
+        loginExecutePostApiMethod()?.statusCode(200)
     }
 
+
     @Test
-    fun test_02_CreateNewBoard() {
+    fun test_02_Creat() {
+        getHeaderExecutePostApiMethod()
+    }
+
+
+    @Test
+    fun test_03_CreateNewBoard() {
         val board = NewBoardHelpers.board
         createBoardNotePostApiMethod(
             requestPayload = board
