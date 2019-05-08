@@ -10,6 +10,6 @@ object NewBoardHelpers {
         prefs_selfJoin = false,
         defaultLists = false,
         prefs_background_url = "",
-        token = getSessionExecutePostApiMethod().toString()
+        token = getSessionExecutePostApiMethod()
     )
 }

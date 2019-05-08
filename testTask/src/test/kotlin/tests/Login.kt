@@ -3,6 +3,7 @@ package tests
 import baseMethods.GetDscMethods.getHeaderExecutePostApiMethod
 import baseMethods.createBoardNotePostApiMethod
 import baseMethods.successfullyLogin.loginExecutePostApiMethod
+import baseMethods.testSession.getSessionExecutePostApiMethod
 import fixtures.NewBoardHelpers
 import org.junit.FixMethodOrder
 import org.junit.Test
@@ -12,14 +13,20 @@ import org.junit.runners.MethodSorters
 class Login {
 
     @Test
-    fun test_01_Login() {
-        loginExecutePostApiMethod()?.statusCode(200)
+    fun test_00_GetDsc() {
+        getHeaderExecutePostApiMethod()
+
     }
 
+    @Test
+    fun test_01_Login() {
+        loginExecutePostApiMethod()?.statusCode(200)
+
+    }
 
     @Test
-    fun test_02_Creat() {
-        getHeaderExecutePostApiMethod()
+    fun test_02() {
+        getSessionExecutePostApiMethod()
     }
 
 

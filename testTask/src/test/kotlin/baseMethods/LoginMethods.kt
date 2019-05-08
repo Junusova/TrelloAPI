@@ -2,7 +2,6 @@ package baseMethods
 
 import domain.CONTENT_TYPE_APPLICATION_URLENCODED
 import io.restassured.RestAssured.given
-import io.restassured.http.Header
 import io.restassured.response.ValidatableResponse
 
 object successfullyLogin {
@@ -18,5 +17,7 @@ object successfullyLogin {
             .`when`()
             .post("https://trello.com/1/authentication").then()
     }
+
+
 }
 
